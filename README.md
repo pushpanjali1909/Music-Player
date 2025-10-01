@@ -64,19 +64,19 @@ Perfect demo project for portfolios and coding practice
 
 ## 📸 Screenshots
 
-![Music Player Interface](![screenshot](https://github.com/user-attachments/assets/8e00a2e5-dfe4-440b-aec6-b94f6d0d2417))
+![Music Player Interface](![screenshot.jpg])
 
 🤝 Contributing
 
 Contributions and feedback are warmly welcome!
 Feel free to:
+Report bugs or request features via Issues
 
+Submit pull requests to add your own improvements
 
 
 ## 🙋‍♀️ Author
 
 Made with ❤️ by [Pushpanjali](https://github.com/pushpanjali1909) 
 
-Report bugs or request features via Issues
 
-Submit pull requests to add your own improvements
