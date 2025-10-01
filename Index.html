@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Music Player</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="Style.css" />
+  <script src="https://kit.fontawesome.com/a7a85a630a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="music-player">
+      <nav>
+        <div class="circle">
+          <i class="fa-solid fa-angle-left"></i>
+        </div>
+        <div class="circle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </nav>
+      
+      <img src="uska hi bna.jpg" alt="Uska Hi Bna Album Art" class="song-img" />
+      
+      <h1>🎵 Uska Hi Bna <span style="font-weight: 500;">"1920 EVIL RETURNS"</span></h1>
+      <p>🎤 Arijit Singh</p>
+
+      <audio id="song">
+        <source src="Uska Hi Banana .mp4" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+
+      <input type="range" value="0" id="progress" />
+
+      <div class="control">
+        <div><i class="fa-solid fa-backward"></i></div>
+        <div onclick="playPause()"><i class="fa-solid fa-play" id="cntrlIcon"></i></div>
+        <div><i class="fa-solid fa-forward"></i></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let progress = document.getElementById("progress");
+    let song = document.getElementById("song");
+    let cntrlIcon = document.getElementById("cntrlIcon");
+
+    
+    song.onloadeddata = function () {
+      progress.max = song.duration;
+      progress.value = song.currentTime;
+    };
+
+  
+    function playPause() {
+      if (cntrlIcon.classList.contains("fa-pause")) {
+        song.pause();
+        cntrlIcon.classList.remove("fa-pause");
+        cntrlIcon.classList.add("fa-play");
+      } else {
+        song.play();
+        cntrlIcon.classList.remove("fa-play");
+        cntrlIcon.classList.add("fa-pause");
+      }
+    }
+
+    
+    song.addEventListener("play", () => {
+      setInterval(() => {
+        progress.value = song.currentTime;
+      }, 500);
+    });
+
+    
+    progress.onchange = function () {
+      song.currentTime = progress.value;
+      song.play();
+      cntrlIcon.classList.remove("fa-play");
+      cntrlIcon.classList.add("fa-pause");
+    };
+  </script>
+</body>
+</html>
