@@ -40,7 +40,8 @@ Perfect demo project for portfolios and coding practice
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 ## 📸 Screenshots
-![Music Player Interface](![screenshot.jpg])
+![Music Player Interface](screenshot.jpg)
+
 
 🤝 Contributing
 Contributions and feedback are warmly welcome!
